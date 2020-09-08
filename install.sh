@@ -28,7 +28,8 @@ else
   arch=32
 fi
 #Build Jetbrains Server
-git clone https://github.com/yushangcl/JetbrainsServer
+#git clone https://github.com/yushangcl/JetbrainsServer
+git clone https://github.com/ferminfeng/JetbrainsServer-1
 if cat /etc/*-release | grep -Eqi "raspbian"; then
   mv JetbrainsServer/binaries/IntelliJIDEALicenseServer_linux_arm jetbrains
 else
