@@ -29,7 +29,7 @@ else
 fi
 #Build Jetbrains Server
 #git clone https://github.com/yushangcl/JetbrainsServer
-git clone git@github.com:ferminfeng/Js.git
+git clone https://github.com/ferminfeng/Js
 if cat /etc/*-release | grep -Eqi "raspbian"; then
   mv Js/binaries/IntelliJIDEALicenseServer_linux_arm jetbrains
 else
