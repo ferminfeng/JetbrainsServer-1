@@ -2,6 +2,7 @@
 #URL: https://github.com/yushangcl/JetbrainsServer
 #E-mail: gayhub@live.cn
 clear
+
 echo "    ################################################"
 echo "    #                                              #"
 echo "    #            Build Jetbrains Server            #"
