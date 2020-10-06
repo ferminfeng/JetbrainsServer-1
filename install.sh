@@ -29,14 +29,14 @@ else
 fi
 #Build Jetbrains Server
 #git clone https://github.com/yushangcl/JetbrainsServer
-git clone https://github.com/ferminfeng/JetbrainsServer-1
+git clone git@github.com:ferminfeng/Js.git
 if cat /etc/*-release | grep -Eqi "raspbian"; then
-  mv JetbrainsServer/binaries/IntelliJIDEALicenseServer_linux_arm jetbrains
+  mv Js/binaries/IntelliJIDEALicenseServer_linux_arm jetbrains
 else
   if [ "$arch" -eq 32 ]; then
-    mv JetbrainsServer/binaries/IntelliJIDEALicenseServer_linux_i386 jetbrains
+    mv Js/binaries/IntelliJIDEALicenseServer_linux_i386 jetbrains
   else
-    mv JetbrainsServer/binaries/IntelliJIDEALicenseServer_linux_amd64 jetbrains
+    mv Js/binaries/IntelliJIDEALicenseServer_linux_amd64 jetbrains
   fi
 fi
 mv jetbrains /usr/bin/
@@ -44,7 +44,7 @@ chmod +x /usr/bin/jetbrains
 nohup jetbrains -p 1017 -u Bat.IT > /home/jetbrains.log 2>&1 &
 echo -ne '\n@reboot root nohup jetbrains > /home/jetbrains.log 2>&1 &\n\n' >>/etc/crontab
 #Cleaning Work
-rm -rf JetbrainsServer
+rm -rf Js
 #Check jetbrains server status
 sleep 1
 echo "Check Jetbrains Server status..."
